@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoyu.springboot.mapper.StudentMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiaoyu.springboot.entity.Student">
+        <result column="id" jdbcType="VARCHAR" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="deptName" jdbcType="VARCHAR" property="deptName" />
+        <result column="totCred" jdbcType="INTEGER" property="totCred" />
+    </resultMap>
+
+    <select id="getStudnetById" resultType="com.xiaoyu.springboot.entity.Student">
+        select * from STUDENT where id = #{id}
+    </select>
+
+</mapper>
